@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick-Up Line Error</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .error-box {
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #d9534f;
+            padding: 20px;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: monospace;
+            position: relative;
+        }
+
+        .error-title {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #d9534f;
+        }
+
+        .close-btn:hover {
+            color: #a94442;
+        }
+    </style>
+</head>
+<body>
+
+<div class="error-box">
+    <span class="close-btn" onclick="closeErrorBox()">x</span>
+    <p class="error-title">Error at line 4:</p>
+    <p>Undefined relationship. Missing foreign key connection.</p>
+    <p><em>Suggested Fix:</em> Connect '<strong>you</strong>' and '<strong>me</strong>' to establish relationship.</p>
+</div>
+
+<script>
+    function closeErrorBox() {
+        document.querySelector('.error-box').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
